@@ -33,7 +33,9 @@
 						%>
 					</td>
 				</tr>
-			</form>
+				</form>
+				<form action="http://localhost:8080/ipass/verander.jsp"><tr><td><button type="submit">Wachtwoord weizigen</button></td></tr></form>
+		
 		</table>
 	</div>
 

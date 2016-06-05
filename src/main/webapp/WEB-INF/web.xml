@@ -16,6 +16,7 @@
 		<servlet-name>Jersey REST Service</servlet-name>
 		<url-pattern>/restservices/*</url-pattern>
 	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>LoginServlet</servlet-name>
 		<servlet-class>service.LoginServlet</servlet-class>
@@ -24,6 +25,16 @@
 		<servlet-name>LoginServlet</servlet-name>
 		<url-pattern>/LoginServlet.do</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>WachtwoordServlet</servlet-name>
+		<servlet-class>service.WachtwoordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>WachtwoordServlet</servlet-name>
+		<url-pattern>/WachtwoordServlet.do</url-pattern>
+	</servlet-mapping>
+	
 	
 	<servlet>
 		<servlet-name>LogoutServlet</servlet-name>
