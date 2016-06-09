@@ -1,3 +1,4 @@
-1 - Logout werkt niet, verwijst blijkbaar niet goed
-2 - NullPointer op jsp pagina wanneer int wordt opgehaald
-3 - Niet vergeten links aan te passen op eind om te linken naar de openshift site
+
+2 - Niet vergeten links aan te passen op eind om te linken naar de openshift site
+3 - Kan vanaf de opdrachten pagina niet terug linken naar vakken.
+4 - TextArea heeft geen maxlenght, moet nog iets komen

@@ -71,6 +71,24 @@ public class UserDAO extends BaseDAO{
 		return password;
 	}
 	
+	private List<String> selectVolledigeNaam(String query){//Haalt het wachtwoord uit de database
+		List<String> naam_vol = new ArrayList<String>();
+		try (Connection con = super.getConnection()) {
+			Statement stmt = con.createStatement();
+			ResultSet dbResultSet = stmt.executeQuery(query);
+		while (dbResultSet.next()){
+			String volledigenaam  = dbResultSet.getString("naam_vol");
+			naam_vol.add(volledigenaam);
+		}
+		}
+		catch (SQLException sqle){
+			sqle.printStackTrace();
+		}
+		return naam_vol;
+	}
+	
+	
+	
 	private int selectIsLeraar(String query){ // haalt bevoegdheid uit Database
 		int isLeraar = 0;
 		try (Connection con = super.getConnection()) {
@@ -111,6 +129,10 @@ public class UserDAO extends BaseDAO{
 		List<Klas> heleKlas = selectKlas("SELECT * FROM users WHERE klas = '"+klas+"'"
 				+ "AND isLeraar=0");
 		return heleKlas;
+	}
+	
+	public List<String> getVolledigeNaam(int persoonlijkecode){//Haalt alles van een gebruiker op met een bepaalde personlijke code
+		return selectVolledigeNaam("SELECT naam_vol FROM users WHERE persoonlijk_nummer ="+persoonlijkecode);
 	}
 	
 	public void veranderWachtwoord(String wachtwoord, String username){//Update het wachtwoord van een gebruiker

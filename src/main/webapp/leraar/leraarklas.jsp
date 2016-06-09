@@ -7,43 +7,49 @@
 <%@ page import="javax.servlet.http.HttpServletRequest"%>
 <%@ page import="javax.servlet.http.HttpServletResponse"%>
 <%@ page import="javax.servlet.http.HttpSession"%>
+<%@ page import="service.Klas"%>
+<%@ page import="java.util.List"%>
 <%@taglibprefix ="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	HttpSession ses = request.getSession();
-	User u = (User) ses.getAttribute("loggedUser");
-	int leerjaar = u.getLeerJaar();
-	UserService service = ServiceProvider.getUserService();
-	request.setAttribute("vaklijst", service.getVakken(leerjaar));
+	List<Klas> klas = (List<Klas>) ses.getAttribute("leerlingenLijst");
+	ses.getAttribute("gekozenVak");
 %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Leraar hoofdpagina</title>
+<title>Leraar Klas</title>
 </head>
+<body>
 <body>
 	<form action="/ipass/leraar/LogoutServlet.do" method="post">
 		<button type="submit" name="submit" value="Submit">Log-Out</button>
 	</form>
-	<h1>OBS de Waayer - Leraar</h1>
-	<h2>Welkom, ${loggedUser.name}</h2>
+	<h1>OBS de Waayer - Leraar klas</h1>
+	<h1>${gekozenOpdracht}</h1>
+	<form action="http://localhost:8080/ipass/leraar/leraaropdrachten.jsp">
+		<button type="submit">Andere opdracht kiezen</button>
+	</form>
 	<table>
 		<tr>
-			<td>Vaknaam</td>
-			<td>Leerjaar</td>
+			<td>Leerlingcode</td>
+			<td>Leerling</td>
+			<td>Klascode</td>
 		</tr>
-		<c:forEach var="vakken" items="${vaklijst}">
+		<c:forEach var="leerling" items="${leerlingenLijst}">
 			<tr>
-				<td>
-					<form action="/ipass/leraar/OpdrachtophaalServlet.do" method="post">
-						<button name="vak_klik" type="submit" value="${vakken.vaknaam}">
-							${vakken.vaknaam}</button>
-					</form>
-				</td>
-				<td>${vakken.leerjaar}</td>
+				<td><form action="/ipass/leraar/VraagEnAntwoordServlet.do"
+						method="post">
+						<button name="leerling_klik" type="submit"
+							value="${leerling.leerlingcode}">
+							${leerling.leerlingcode}</button>
+					</form></td>
+				<td>${leerling.leerlingnaam}</td>
+				<td>${leerling.klascode}</td>
 			</tr>
 		</c:forEach>
 	</table>
-
 </body>
 </html>
