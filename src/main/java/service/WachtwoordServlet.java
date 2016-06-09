@@ -14,13 +14,20 @@ public class WachtwoordServlet extends HttpServlet {
 		String gebruikersnaam = req.getParameter("gebruikersnaam_verander");
 		String wachtwoord = req.getParameter("wachtwoord_verander");
 		String wachtwoord_nieuw = req.getParameter("wachtwoord_nieuw");
+		String wachtwoord_herhaal = req.getParameter("wachtwoord_herhaal");
 		String passwordForCheck = service.getPassword(gebruikersnaam);
 		List<User> userlist = service.getUserInList(gebruikersnaam);
 		
 		if(!userlist.isEmpty()){
 			if(wachtwoord.equals(passwordForCheck)){
-				service.veranderWachtWoord(wachtwoord_nieuw, gebruikersnaam);
-				req.getRequestDispatcher("/index.jsp").forward(req, resp);
+				if(wachtwoord_herhaal.equals(wachtwoord_nieuw)){
+					service.veranderWachtWoord(wachtwoord_nieuw, gebruikersnaam);
+					req.getRequestDispatcher("/index.jsp").forward(req, resp);
+				}
+				else{
+					req.setAttribute("msgs", "Wachtwoorden komen niet overeen, probeer opnieuw.");
+					req.getRequestDispatcher("/verander.jsp").forward(req, resp);
+				}
 			}
 			else{
 				req.setAttribute("msgs", "Wachtwoord klopt niet");

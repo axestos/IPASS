@@ -19,7 +19,7 @@ public int getLeerlingcode() {
 	return leerlingcode;
 }
 
-public String getLeerlingNaam() {
+public String getLeerlingnaam() {
 	return leerlingNaam;
 }
 }

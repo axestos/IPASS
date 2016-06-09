@@ -11,9 +11,11 @@ import javax.servlet.http.HttpSession;
 public class LogoutServlet extends HttpServlet{
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		
 	HttpSession ses = req.getSession();
 	ses.invalidate();
-	req.getRequestDispatcher("index.jsp").forward(req, resp);
+//	req.getRequestDispatcher("index.jsp").forward(req, resp);
+	resp.sendRedirect("index.jsp");
 	}
 	
 }

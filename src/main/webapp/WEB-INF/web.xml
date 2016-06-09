@@ -35,14 +35,62 @@
 		<url-pattern>/WachtwoordServlet.do</url-pattern>
 	</servlet-mapping>
 	
-	
 	<servlet>
 		<servlet-name>LogoutServlet</servlet-name>
 		<servlet-class>service.LogoutServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>LogoutServlet</servlet-name>
+		<url-pattern>/leerling/LogoutServlet.do</url-pattern>
+		<url-pattern>/leraar/LogoutServlet.do</url-pattern>
 		<url-pattern>/LogoutServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>OpdrachtophaalServlet</servlet-name>
+		<servlet-class>service.OpdrachtophaalServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OpdrachtophaalServlet</servlet-name>
+		<url-pattern>/OpdrachtophaalServlet.do</url-pattern>
+		<url-pattern>/leerling/OpdrachtophaalServlet.do</url-pattern>
+		<url-pattern>/leraar/OpdrachtophaalServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>HuiswerkvragenServlet</servlet-name>
+		<servlet-class>service.HuiswerkvragenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HuiswerkvragenServlet</servlet-name>
+		<url-pattern>/leerling/HuiswerkvragenServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LeerlingOphaalServlet</servlet-name>
+		<servlet-class>service.LeerlingOphaalServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LeerlingOphaalServlet</servlet-name>
+		<url-pattern>/leraar/LeerlingOphaalServlet.do</url-pattern>
+	</servlet-mapping>	
+	
+	<servlet>
+		<servlet-name>SubmitAntwoordServlet</servlet-name>
+		<servlet-class>service.SubmitAntwoordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SubmitAntwoordServlet</servlet-name>
+		<url-pattern>/leerling/SubmitAntwoordServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>VraagEnAntwoordServlet</servlet-name>
+		<servlet-class>service.VraagEnAntwoordServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VraagEnAntwoordServlet</servlet-name>
+		<url-pattern>/leraar/VraagEnAntwoordServlet.do</url-pattern>
 	</servlet-mapping>
 	
 	<filter>
@@ -78,8 +126,4 @@
 		<dispatcher>REQUEST</dispatcher>
 		<dispatcher>FORWARD</dispatcher>
 	</filter-mapping>
-	
-	
-	
-	
 </web-app>

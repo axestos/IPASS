@@ -20,11 +20,15 @@
 				</tr>
 				<tr>
 					<td>Huidig wachtwoord:</td>
-					<td><input type="password" name="wachtwoord_verander"></td>
+					<td><input maxlength="20" type="password" name="wachtwoord_verander"></td>
 				</tr>
 				<tr>
 					<td>Nieuw wachtwoord:</td>
-					<td><input type="password" name="wachtwoord_nieuw"></td>
+					<td><input maxlength="20" type="password" name="wachtwoord_nieuw"></td>
+				</tr>
+				<tr>
+					<td>Herhaal nieuw wachtwoord:</td>
+					<td><input maxlength="20" type="password" name="wachtwoord_herhaal"></td>
 				</tr>
 				<tr>
 					<td><button type="submit" name="submit" value="Submit">Verander wachtwoord</button></td>

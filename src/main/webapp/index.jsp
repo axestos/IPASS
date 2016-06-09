@@ -12,7 +12,7 @@
 	<img src="http://waayer-tiel.nl/file/50174">
 	<div>
 		<table>
-			<form action="LoginServlet.do" method="post">
+			<form action="/ipass/LoginServlet.do" method="post">
 				<tr>
 					<td>Gebruikersnaam:</td>
 					<td><input type="text" name="gebruikersnaam_login"
@@ -20,7 +20,7 @@
 				</tr>
 				<tr>
 					<td>Wachtwoord:</td>
-					<td><input type="password" name="wachtwoord_login"></td>
+					<td><input maxlength="20" type="password" name="wachtwoord_login"></td>
 				</tr>
 				<tr>
 					<td><button type="submit" name="submit" value="Submit">Log-In</button></td>
