@@ -4,7 +4,15 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>Inloggen</title>
-
+<style type="text/css">
+input {
+	border: 0;
+	outline: 0;
+	background: transparent;
+	border-bottom: 1px solid black;
+	width: 150px;
+}
+</style>
 </head>
 <body>
 	<h1>OBS de Waayer - Login</h1>

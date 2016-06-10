@@ -5,6 +5,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Wachtwoord weizigen</title>
+<style type="text/css">
+input {
+	border: 0;
+	outline: 0;
+	background: transparent;
+	border-bottom: 1px solid black;
+	width: 150px;
+}
+</style>
 </head>
 <body>
 
@@ -24,7 +33,7 @@
 				</tr>
 				<tr>
 					<td>Nieuw wachtwoord:</td>
-					<td><input maxlength="20" type="password" name="wachtwoord_nieuw"></td>
+					<td><input maxlength="20" type="password" name="wachtwoord_nieuw"></td><td>(Maximaal 20 tekens)</td>
 				</tr>
 				<tr>
 					<td>Herhaal nieuw wachtwoord:</td>

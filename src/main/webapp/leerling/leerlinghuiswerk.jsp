@@ -31,46 +31,56 @@
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <style>
 div {
-  border-radius: 25px;
-  width: 200px;
-  height: 100px;
-  margin: 24px 0;
-  padding: 16px;
+	border-radius: 25px;
+	width: 200px;
+	height: 110px;
+	margin: 24px 0;
+	padding: 16px;
 }
 </style>
 <body>
 	<h1>OBS de Waayer - Opdrachten</h1>
 	<h1>${gekozenOpdracht}</h1>
 	<br>
-	<form action="http://localhost:8080/ipass/leerling/leerlingopdrachten.jsp">
-	<button type="submit">Andere opdracht kiezen</button>
+	<form
+		action="http://localhost:8080/ipass/leerling/leerlingopdrachten.jsp">
+		<button type="submit">Andere opdracht kiezen</button>
 	</form>
 	<div class="w3-card-2 w3-red">
-	Foutmeldingen:<br>
-	<%Object msgs = request.getAttribute("msgs");
-		if (msgs != null) {
-		out.println(msgs);
-		}
-				%>
+		Foutmeldingen:<br>
+		<%
+			Object msgs = request.getAttribute("msgs");
+			if (msgs != null) {
+				out.println(msgs);
+			}
+		%>
 	</div>
 	<table>
-		<c:forEach var="vraag" items="${huiswerkLijst}"  varStatus="status">
+		<c:forEach var="vraag" items="${huiswerkLijst}" varStatus="status">
 			<form action="/ipass/leerling/SubmitAntwoordServlet.do" method="post">
-			<tr>
-				<td>
-					<button name="vraag" value="${vraag.vraag}">${vraag.vraag}</button>
-				</td>
-			</tr>
-			<tr>
-				<td><textarea maxlenght="500" cols="45" rows="5"
-						name="textfield">${antwoordenLijst[status.index]}</textarea></td>
-			</tr>
-			<tr>
-				<td><button type="submit" name="submit" value="Submit">
-						Sla antwoord op</button></td>
-			</tr>
-			<tr><td></td></tr>
+				<tr>
+					<td>${vraag.vraag}</td>
+				</tr>
+				<tr>
+					<td><textarea maxlenght="500" cols="45" rows="5"
+							name="textfield">${antwoordenLijst[status.index]}</textarea></td>
+				</tr>
+				<tr>
+					<td><button type="submit" name="submit" value="${vraag.vraag}">
+							Sla antwoord op</button></td>
 			</form>
+			</tr>
+			<tr>
+			<td><form action="/ipass/leerling/VerwijderServlet.do"
+					method="post">
+					<button type="submit" name="delete" value="${vraag.vraag}">Verwijder
+						antwoord</button>
+				</form></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+
 		</c:forEach>
 	</table>
 </body>

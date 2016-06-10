@@ -85,6 +85,15 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>VerwijderServlet</servlet-name>
+		<servlet-class>service.VerwijderServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>VerwijderServlet</servlet-name>
+		<url-pattern>/leerling/VerwijderServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>VraagEnAntwoordServlet</servlet-name>
 		<servlet-class>service.VraagEnAntwoordServlet</servlet-class>
 	</servlet>
