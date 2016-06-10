@@ -34,7 +34,7 @@ input {
 				<tr>
 					<td>Nieuw wachtwoord:</td>
 					<td><input maxlength="20" type="password" name="wachtwoord_nieuw"></td><td>(Maximaal 20 tekens)</td>
-				</tr>
+
 				<tr>
 					<td>Herhaal nieuw wachtwoord:</td>
 					<td><input maxlength="20" type="password" name="wachtwoord_herhaal"></td>

@@ -31,6 +31,7 @@
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <style>
 div {
+<<<<<<< HEAD
 	border-radius: 25px;
 	width: 200px;
 	height: 110px;
@@ -80,7 +81,6 @@ div {
 			<tr>
 				<td></td>
 			</tr>
-
 		</c:forEach>
 	</table>
 </body>
