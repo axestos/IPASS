@@ -18,22 +18,16 @@ public class SubmitAntwoordServlet extends HttpServlet {
 		String vraag = req.getParameter("submit");
 		
 		String antwoord = req.getParameter("textfield");
-		int antwoordCount = antwoord.length();
 		int persoonlijkecode = u.getPersoonlijk_nummer();
 		
 		String gekozen_vakcode = (String) ses.getAttribute("gekozenOpdracht");
 	
 		List<String> alGegevenAntwoord = service.getAntwoordBijVraag(gekozen_vakcode, persoonlijkecode, vraag);
-		
 
 		if (!antwoord.equals("")) {
-			if(antwoordCount > 500){
-				req.setAttribute("msgs", "Antwoord moet kleiner dan 500 tekens zijn");
-				req.getRequestDispatcher("leerlinghuiswerk.jsp").forward(req, resp);
-			}
-			else{
 				if (alGegevenAntwoord.isEmpty()) {
 					System.out.println("Er is nog geen antwoord gegeven");
+					service.deleteAntwoord(persoonlijkecode, gekozen_vakcode, vraag); //deze erin gezet omdat hij een error gaf als er eerst gedelete was
 					service.insertAntwoord(antwoord, persoonlijkecode, gekozen_vakcode, vraag);
 					resp.sendRedirect("leerlinghuiswerk.jsp");
 				} else {
@@ -41,7 +35,6 @@ public class SubmitAntwoordServlet extends HttpServlet {
 					service.deleteAntwoord(persoonlijkecode, gekozen_vakcode, vraag);
 					service.insertAntwoord(antwoord, persoonlijkecode, gekozen_vakcode, vraag);
 					resp.sendRedirect("leerlinghuiswerk.jsp");
-				}
 				}
 		} else {
 			req.setAttribute("msgs", "Vul een antwoord in!");
