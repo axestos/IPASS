@@ -22,7 +22,7 @@ input {
 	<img src="http://waayer-tiel.nl/file/50174">
 	<div>
 		<table>
-			<form action="WachtwoordServlet.do" method="post">
+			<form action="/WachtwoordServlet.do" method="post">
 				<tr>
 					<td>Gebruikersnaam:</td>
 					<td><input type="text" name="gebruikersnaam_verander"></td>
@@ -51,7 +51,7 @@ input {
 					</td>
 				</tr>
 			</form>
-			<form action="http://localhost:8080/ipass/index.jsp">
+			<form action="http://ipass-v1wackw.rhcloud.com/">
 				<tr>
 					<td><button type="submit">Login Pagina</button></td>
 				</tr>
