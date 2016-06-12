@@ -29,7 +29,7 @@ h1 {
  font-size: 250%;
 }
 
-div {
+td.data {
 	font-size : 125%;
 }
 
@@ -53,10 +53,10 @@ button {
 		<c:forEach var="vraag" items="${huiswerkLijst}" varStatus="status">
 			<div>
 			<tr>
-				<td>${vraag.vraag}</td>
+				<td class="data">${vraag.vraag}</td>
 			</tr>
 			<tr>
-				<td><b>${antwoordenLijst[status.index]}</b></td>
+				<td class="data"><b>${antwoordenLijst[status.index]}</b></td>
 			</tr>
 			</div>
 		</c:forEach>

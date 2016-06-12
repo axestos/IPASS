@@ -17,7 +17,7 @@ input {
 	font-size : 125%;
 }
 
-div {
+td.data {
 	font-size : 125%;
 }
 
@@ -34,17 +34,17 @@ button {
 		<table>
 			<form action="/LoginServlet.do" method="post">
 				<tr>
-					<td>Gebruikersnaam:</td>
+					<td class="data">Gebruikersnaam:</td>
 					<td><input type="text" name="gebruikersnaam_login"
 						value="${cookie.gebruikersnaam.value}"></td>
 				</tr>
 				<tr>
-					<td>Wachtwoord:</td>
+					<td class="data">Wachtwoord:</td>
 					<td><input maxlength="20" type="password" name="wachtwoord_login"></td>
 				</tr>
 				<tr>
 					<td><button type="submit" name="submit" value="Submit">Log-In</button></td>
-				<td>
+				<td class="data">
 						<%
 							Object msgs = request.getAttribute("msgs");
 							if (msgs != null) {

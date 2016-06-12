@@ -26,7 +26,7 @@ h1 {
  font-size: 250%;
 }
 
-div {
+td.data {
 	font-size : 125%;
 }
 
@@ -48,9 +48,9 @@ button {
 	<div>
 	<table>
 		<tr>
-			<td>Leerlingcode</td>
-			<td>Leerling</td>
-			<td>Klascode</td>
+			<td class="data">Leerlingcode</td>
+			<td class="data">Leerling</td>
+			<td class="data">Klascode</td>
 		</tr>
 		<c:forEach var="leerling" items="${leerlingenLijst}">
 			<tr>
@@ -60,8 +60,8 @@ button {
 							value="${leerling.leerlingcode}">
 							${leerling.leerlingcode}</button>
 					</form></td>
-				<td>${leerling.leerlingnaam}</td>
-				<td>${leerling.klascode}</td>
+				<td class="data">${leerling.leerlingnaam}</td>
+				<td class="data">${leerling.klascode}</td>
 			</tr>
 		</c:forEach>
 	</table>

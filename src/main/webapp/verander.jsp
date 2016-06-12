@@ -18,7 +18,7 @@ input {
 	font-size : 125%;
 }
 
-div {
+td.data {
 	font-size : 125%;
 }
 
@@ -36,19 +36,19 @@ button {
 		<table>
 			<form action="/WachtwoordServlet.do" method="post">
 				<tr>
-					<td>Gebruikersnaam:</td>
+					<td class="data">Gebruikersnaam:</td>
 					<td><input type="text" name="gebruikersnaam_verander"></td>
 				</tr>
 				<tr>
-					<td>Huidig wachtwoord:</td>
+					<td class="data">Huidig wachtwoord:</td>
 					<td><input maxlength="20" type="password" name="wachtwoord_verander"></td>
 				</tr>
 				<tr>
-					<td>Nieuw wachtwoord:</td>
+					<td class="data">Nieuw wachtwoord:</td>
 					<td><input maxlength="20" type="password" name="wachtwoord_nieuw"></td><td>(Maximaal 20 tekens)</td>
 
 				<tr>
-					<td>Herhaal nieuw wachtwoord:</td>
+					<td class="data">Herhaal nieuw wachtwoord:</td>
 					<td><input maxlength="20" type="password" name="wachtwoord_herhaal"></td>
 				</tr>
 				<tr>

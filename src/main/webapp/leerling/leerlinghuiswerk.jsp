@@ -42,12 +42,16 @@ h1 {
  font-size: 250%;
 }
 
-div.text{
+td.data{
 	font-size : 125%
 }
 
 button {
 	font-size: 105%;
+}
+
+textarea {
+ font-size : 125%
 }
 </style>
 
@@ -68,15 +72,15 @@ button {
 			}
 		%>
 	</div>
-	<div class="text">
+	<div>
 	<table>
 		<c:forEach var="vraag" items="${huiswerkLijst}" varStatus="status">
 			<form action="/leerling/SubmitAntwoordServlet.do" method="post">
 				<tr>
-					<td>${vraag.vraag}</td>
+					<td class="data">${vraag.vraag}</td>
 				</tr>
 				<tr>
-					<td><textarea maxlenght="500" cols="45" rows="5"
+					<td><textarea maxlength="500" cols="45" rows="5"
 							name="textfield">${antwoordenLijst[status.index]}</textarea></td>
 				</tr>
 				<tr>
