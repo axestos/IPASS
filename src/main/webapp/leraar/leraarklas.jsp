@@ -24,12 +24,12 @@
 </head>
 <body>
 <body>
-	<form action="/ipass/leraar/LogoutServlet.do" method="post">
+	<form action="/leraar/LogoutServlet.do" method="post">
 		<button type="submit" name="submit" value="Submit">Log-Out</button>
 	</form>
 	<h1>OBS de Waayer - Leraar klas</h1>
 	<h1>${gekozenOpdracht}</h1>
-	<form action="http://localhost:8080/ipass/leraar/leraaropdrachten.jsp">
+	<form action="http://ipass-v1wackw.rhcloud.com/leraar/leraaropdrachten.jsp">
 		<button type="submit">Andere opdracht kiezen</button>
 	</form>
 	<table>
@@ -40,7 +40,7 @@
 		</tr>
 		<c:forEach var="leerling" items="${leerlingenLijst}">
 			<tr>
-				<td><form action="/ipass/leraar/VraagEnAntwoordServlet.do"
+				<td><form action="/leraar/VraagEnAntwoordServlet.do"
 						method="post">
 						<button name="leerling_klik" type="submit"
 							value="${leerling.leerlingcode}">

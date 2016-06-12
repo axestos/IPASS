@@ -27,13 +27,13 @@
 </head>
 
 <body>
-	<form action="/ipass/leraar/LogoutServlet.do" method="post">
+	<form action="/leraar/LogoutServlet.do" method="post">
 		<button type="submit" name="submit" value="Submit">Log-Out</button>
 	</form>
 	<h1>OBS de Waayer - Antwoorden van leerling:</h1>
 	<h1>${opgevraagdeLeerling}</h1>
 	<form
-		action="http://localhost:8080/ipass/leraar/leraarklas.jsp">
+		action="http://ipass-v1wackw.rhcloud.com/leraar/leraarklas.jsp">
 		<button type="submit">Andere leerling kiezen</button>
 	</form>
 	<table>
