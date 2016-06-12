@@ -20,6 +20,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Leraar opdrachten</title>
+<style type="text/css">
+h1 {
+ font-size: 250%;
+}
+
+div {
+	font-size : 125%;
+}
+
+button {
+	font-size: 105%;
+}
+</style>
 </head>
 <body>
 	<form action="/leraar/LogoutServlet.do" method="post">
@@ -30,6 +43,7 @@
 	<form action="http://ipass-v1wackw.rhcloud.com/leraar/leraarstart.jsp">
 		<button type="submit">Ander vak kiezen</button>
 	</form>
+	<div>
 	<table>
 		<tr>
 			<td>Opdrachtcode</td>
@@ -49,5 +63,6 @@
 			</tr>
 		</c:forEach>
 	</table>
+	</div>
 </body>
 </html>

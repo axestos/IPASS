@@ -20,6 +20,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Leerling hoofdpagina</title>
+<style type="text/css">
+h1 {
+	font-size: 250%;
+}
+
+div {
+	font-size: 125%;
+}
+
+button {
+	font-size: 105%;
+}
+</style>
 </head>
 <body>
 	<form action="/leerling/LogoutServlet.do" method="post">
@@ -27,23 +40,24 @@
 	</form>
 	<h1>OBS de Waayer - Leerling</h1>
 	<h2>Welkom, ${loggedUser.name}</h2>
-	<table>
-		<tr>
-			<td>Vaknaam</td>
-			<td>Leerjaar</td>
-		</tr>
-		<c:forEach var="vakken" items="${vaklijst}">
+	<div>
+		<table>
 			<tr>
-				<td>
-					<form action="/leerling/OpdrachtophaalServlet.do" method="post">
-						<button name="vak_klik" type="submit" value="${vakken.vaknaam}">
-							${vakken.vaknaam}</button>
-					</form>
-				</td>
-				<td>${vakken.leerjaar}</td>
+				<td>Vaknaam</td>
+				<td>Leerjaar</td>
 			</tr>
-		</c:forEach>
-	</table>
-
+			<c:forEach var="vakken" items="${vaklijst}">
+				<tr>
+					<td>
+						<form action="/leerling/OpdrachtophaalServlet.do" method="post">
+							<button name="vak_klik" type="submit" value="${vakken.vaknaam}">
+								${vakken.vaknaam}</button>
+						</form>
+					</td>
+					<td>${vakken.leerjaar}</td>
+				</tr>
+			</c:forEach>
+		</table>
+	</div>
 </body>
 </html>

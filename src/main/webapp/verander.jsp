@@ -6,12 +6,24 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Wachtwoord weizigen</title>
 <style type="text/css">
+h1 {
+ font-size: 250%;
+}
 input {
 	border: 0;
 	outline: 0;
 	background: transparent;
 	border-bottom: 1px solid black;
-	width: 150px;
+	width: 250px;
+	font-size : 125%;
+}
+
+div {
+	font-size : 125%;
+}
+
+button {
+	font-size: 105%;
 }
 </style>
 </head>

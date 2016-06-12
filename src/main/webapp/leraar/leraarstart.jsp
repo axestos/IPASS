@@ -20,6 +20,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Leraar hoofdpagina</title>
+<style type="text/css">
+h1 {
+ font-size: 250%;
+}
+
+h2{
+	font-size: 225%;
+}
+
+div {
+	font-size : 125%;
+}
+
+button {
+	font-size: 105%;
+}
+</style>
 </head>
 <body>
 	<form action="/leraar/LogoutServlet.do" method="post">
@@ -27,6 +44,7 @@
 	</form>
 	<h1>OBS de Waayer - Leraar</h1>
 	<h2>Welkom, ${loggedUser.name}</h2>
+	<div>
 	<table>
 		<tr>
 			<td>Vaknaam</td>
@@ -44,6 +62,6 @@
 			</tr>
 		</c:forEach>
 	</table>
-
+</div>
 </body>
 </html>

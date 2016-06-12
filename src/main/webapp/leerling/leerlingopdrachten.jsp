@@ -21,6 +21,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Opdrachten</title>
+<style type="text/css">
+h1 {
+ font-size: 250%;
+}
+
+div {
+	font-size : 125%;
+}
+
+button {
+	font-size: 105%;
+}
+</style>
 </head>
 <body>
 	<form action="/leerling/LogoutServlet.do" method="post">
@@ -29,6 +42,7 @@
 	<h1>OBS de Waayer - Opdrachten</h1>
 	<h1>${gekozenVak}</h1>
 	<br>
+	<div>
 	<table>
 		<tr>
 			<td>Opdrachtcode</td>
@@ -48,6 +62,6 @@
 			<button type="submit">Ander vak kiezen</button>
 			</form>
 	</table>
-
+</div>
 </body>
 </html>

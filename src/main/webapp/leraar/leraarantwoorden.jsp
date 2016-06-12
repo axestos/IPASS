@@ -24,6 +24,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Leraar antwoorden</title>
+<style type="text/css">
+h1 {
+ font-size: 250%;
+}
+
+div {
+	font-size : 125%;
+}
+
+button {
+	font-size: 105%;
+}
+</style>
 </head>
 
 <body>

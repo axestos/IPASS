@@ -30,14 +30,27 @@
 </head>
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <style>
-div {
-	border-radius: 25px;
-	width: 200px;
-	height: 110px;
-	margin: 24px 0;
+div.container {
+	border-radius: 31px;
+	width: 250px;
+	height: 138px;
+	margin: 30px 0;
 	padding: 16px;
+	font-size : 125%;
+}
+h1 {
+ font-size: 250%;
+}
+
+div.text{
+	font-size : 125%
+}
+
+button {
+	font-size: 105%;
 }
 </style>
+
 <body>
 	<h1>OBS de Waayer - Opdrachten</h1>
 	<h1>${gekozenOpdracht}</h1>
@@ -46,7 +59,7 @@ div {
 		action="http://ipass-v1wackw.rhcloud.com/leerling/leerlingopdrachten.jsp">
 		<button type="submit">Andere opdracht kiezen</button>
 	</form>
-	<div class="w3-card-2 w3-red">
+	<div class="w3-card-2 w3-red" class="container">
 		Foutmeldingen:<br>
 		<%
 			Object msgs = request.getAttribute("msgs");
@@ -55,6 +68,7 @@ div {
 			}
 		%>
 	</div>
+	<div class="text">
 	<table>
 		<c:forEach var="vraag" items="${huiswerkLijst}" varStatus="status">
 			<form action="/leerling/SubmitAntwoordServlet.do" method="post">
@@ -82,5 +96,6 @@ div {
 			</tr>
 		</c:forEach>
 	</table>
+	</div>
 </body>
 </html>
