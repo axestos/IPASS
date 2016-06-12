@@ -25,6 +25,10 @@ h1 {
 	font-size: 250%;
 }
 
+h2{
+	font-size: 225%;
+}
+
 td.data {
 	font-size: 125%;
 }
