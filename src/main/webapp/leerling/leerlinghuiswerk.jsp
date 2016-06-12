@@ -31,7 +31,6 @@
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <style>
 div {
-<<<<<<< HEAD
 	border-radius: 25px;
 	width: 200px;
 	height: 110px;
@@ -44,7 +43,7 @@ div {
 	<h1>${gekozenOpdracht}</h1>
 	<br>
 	<form
-		action="http://localhost:8080/ipass/leerling/leerlingopdrachten.jsp">
+		action="http://ipass-v1wackw.rhcloud.com/leerling/leerlingopdrachten.jsp">
 		<button type="submit">Andere opdracht kiezen</button>
 	</form>
 	<div class="w3-card-2 w3-red">
@@ -58,7 +57,7 @@ div {
 	</div>
 	<table>
 		<c:forEach var="vraag" items="${huiswerkLijst}" varStatus="status">
-			<form action="/ipass/leerling/SubmitAntwoordServlet.do" method="post">
+			<form action="/leerling/SubmitAntwoordServlet.do" method="post">
 				<tr>
 					<td>${vraag.vraag}</td>
 				</tr>
@@ -72,7 +71,7 @@ div {
 			</form>
 			</tr>
 			<tr>
-			<td><form action="/ipass/leerling/VerwijderServlet.do"
+			<td><form action="/leerling/VerwijderServlet.do"
 					method="post">
 					<button type="submit" name="delete" value="${vraag.vraag}">Verwijder
 						antwoord</button>

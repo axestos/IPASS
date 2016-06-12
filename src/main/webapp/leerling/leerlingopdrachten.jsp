@@ -23,7 +23,7 @@
 <title>Opdrachten</title>
 </head>
 <body>
-	<form action="/ipass/leerling/LogoutServlet.do" method="post">
+	<form action="/leerling/LogoutServlet.do" method="post">
 		<button type="submit" name="submit" value="Submit">Log-Out</button>
 	</form>
 	<h1>OBS de Waayer - Opdrachten</h1>
@@ -37,14 +37,14 @@
 		</tr>
 		<c:forEach var="opdrachten" items="${opdrachtenLijst}">
 			<tr>
-				<td><form action="/ipass/leerling/HuiswerkvragenServlet.do" method="post">
+				<td><form action="/leerling/HuiswerkvragenServlet.do" method="post">
 				<button name="opdracht_klik" type="submit" value="${opdrachten.opdrachtcode}">
 				${opdrachten.opdrachtcode}</button></form></td>
 				<td>${opdrachten.vaknaam}</td>
 				<td>${opdrachten.leerjaar}</td>
 			</tr>
 		</c:forEach>
-			<form action="http://localhost:8080/ipass/leerling/leerlingstart.jsp">
+			<form action="http://ipass-v1wackw.rhcloud.com/leerling/leerlingstart.jsp">
 			<button type="submit">Ander vak kiezen</button>
 			</form>
 	</table>

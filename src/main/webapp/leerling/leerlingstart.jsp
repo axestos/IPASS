@@ -22,7 +22,7 @@
 <title>Leerling hoofdpagina</title>
 </head>
 <body>
-	<form action="/ipass/leerling/LogoutServlet.do" method="post">
+	<form action="/leerling/LogoutServlet.do" method="post">
 		<button type="submit" name="submit" value="Submit">Log-Out</button>
 	</form>
 	<h1>OBS de Waayer - Leerling</h1>
@@ -35,7 +35,7 @@
 		<c:forEach var="vakken" items="${vaklijst}">
 			<tr>
 				<td>
-					<form action="/ipass/leerling/OpdrachtophaalServlet.do" method="post">
+					<form action="/leerling/OpdrachtophaalServlet.do" method="post">
 						<button name="vak_klik" type="submit" value="${vakken.vaknaam}">
 							${vakken.vaknaam}</button>
 					</form>
