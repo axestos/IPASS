@@ -30,11 +30,11 @@
 </head>
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <style>
-div.container {
+div {
 	border-radius: 31px;
 	width: 250px;
 	height: 138px;
-	margin: 30px 0;
+	margin: 30px;
 	padding: 16px;
 	font-size : 125%;
 }
@@ -63,7 +63,7 @@ textarea {
 		action="http://ipass-v1wackw.rhcloud.com/leerling/leerlingopdrachten.jsp">
 		<button type="submit">Andere opdracht kiezen</button>
 	</form>
-	<div class="w3-card-2 w3-red" class="container">
+	<div class="w3-card-2 w3-red">
 		Foutmeldingen:<br>
 		<%
 			Object msgs = request.getAttribute("msgs");
@@ -72,7 +72,7 @@ textarea {
 			}
 		%>
 	</div>
-	<div>
+
 	<table>
 		<c:forEach var="vraag" items="${huiswerkLijst}" varStatus="status">
 			<form action="/leerling/SubmitAntwoordServlet.do" method="post">
@@ -100,6 +100,6 @@ textarea {
 			</tr>
 		</c:forEach>
 	</table>
-	</div>
+
 </body>
 </html>
