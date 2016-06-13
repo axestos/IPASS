@@ -54,7 +54,7 @@ button {
 	</c:if>
 	<c:if test="${not empty feedback}">
 	<p>Feedback van de leraar:</p>
-	<p>${feedback}</p>
+	<p class="text">${feedback}</p>
 	</c:if>	
 </body>
 </html>
