@@ -27,11 +27,10 @@
 	int leerlingcode = leerling.getPersoonlijk_nummer();
 	String opdrachtcode = (String) ses.getAttribute("gekozenOpdracht");
 	List<String> feedbackList = service.getFeedback(leerlingcode, opdrachtcode);
-	if(!feedbackList.isEmpty()){
+	if (!feedbackList.isEmpty()) {
 		String feedback = feedbackList.get(0);
 		ses.setAttribute("feedback", feedback);
-	}
-	else{
+	} else {
 		ses.setAttribute("feedback", "");
 	}
 %>
@@ -52,6 +51,10 @@ td.data {
 button {
 	font-size: 105%;
 }
+
+textarea {
+	font-size: 125%
+}
 </style>
 </head>
 
@@ -66,29 +69,29 @@ button {
 	</form>
 	<table>
 		<c:forEach var="vraag" items="${huiswerkLijst}" varStatus="status">
-			<div>
-				<tr>
-					<td class="data">${vraag.vraag}</td>
-				</tr>
-				<tr>
-					<td class="data"><b>${antwoordenLijst[status.index]}</b></td>
-				</tr>
-			</div>
+			<tr>
+				<td class="data">${vraag.vraag}</td>
+			</tr>
+			<tr>
+				<td class="data"><b>${antwoordenLijst[status.index]}</b></td>
+			</tr>
 		</c:forEach>
 		<tr>
 			<td>
 				<form action="/leraar/InsertFeedbackServlet.do" method="post">
 					<textarea maxlength="500" cols="45" rows="5" name="textfield">${feedback}</textarea>
-					<button type="submit"  name="submit" value="Submit">Sla Feedback op</button>
+					<button type="submit" name="submit" value="Submit">Sla
+						Feedback op</button>
 				</form>
 			</td>
 		</tr>
 		<tr>
-		<td>
-		<form action="/leraar/DeleteFeedback.do" method="post">
-		<button type="submit"  name="submit" value="Submit">Verwijder Feedback</button>
-		</form>
-		</td>
+			<td>
+				<form action="/leraar/DeleteFeedback.do" method="post">
+					<button type="submit" name="submit" value="Submit">Verwijder
+						Feedback</button>
+				</form>
+			</td>
 		</tr>
 	</table>
 </body>
