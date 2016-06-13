@@ -31,7 +31,7 @@ public class OpdrachtDAO extends BaseDAO {
 		return vakken;
 	}
 	
-	private List<Opdracht> selectOpdrachten(String query){//haalt een user uit de database
+	private List<Opdracht> selectOpdrachten(String query){//haalt een user op uit de database
 		List<Opdracht> opdrachten = new ArrayList<Opdracht>();
 		try (Connection con = super.getConnection()) {
 			Statement stmt = con.createStatement();
@@ -69,7 +69,7 @@ public class OpdrachtDAO extends BaseDAO {
 	}
 	
 	
-	public List<Huiswerk> getVragen(String opdrachtcode){
+	public List<Huiswerk> getVragen(String opdrachtcode){//Haalt alle vragen op met een bepaalde opdrachtcode
 		List<Huiswerk> huiswerk = selectHuiswerkvragen("SELECT opdrachtcode, vraag FROM opdracht WHERE opdrachtcode='"+opdrachtcode+"'");
 		return huiswerk;
 	}
@@ -80,7 +80,7 @@ public class OpdrachtDAO extends BaseDAO {
 		return vakken;
 	}
 	
-	public List<Opdracht> getOpdrachten(int leerjaar, String vaknaam){
+	public List<Opdracht> getOpdrachten(int leerjaar, String vaknaam){//Haalt de opdrachtcodes op van een leerjaar en vak
 		List<Opdracht> opdrachten = selectOpdrachten("Select distinct opdrachtcode, vaknaam, leerjaar from opdracht "
 				+ "WHERE leerjaar ="+leerjaar+" AND vaknaam = '"+vaknaam+"'");
 		return opdrachten;

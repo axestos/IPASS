@@ -5,7 +5,7 @@ import java.util.List;
 import DAO.AntwoordDAO;
 import DAO.OpdrachtDAO;
 import DAO.UserDAO;
-
+//Implementeerd alle DAO's voor gebruik in andere klassen.
 public class UserService {
 	private UserDAO dao = new UserDAO();
 	private OpdrachtDAO opdracht = new OpdrachtDAO();

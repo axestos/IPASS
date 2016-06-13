@@ -27,4 +27,6 @@ public class VraagEnAntwoordServlet extends HttpServlet {
 		
 		req.getRequestDispatcher("/leraar/leraarantwoorden.jsp").forward(req, resp);
 	}
+	//Haalt de vragen op van een bepaalde opdrachtcode en de daarop gegeven antwoorden van een leerling
+	//Deze worden getoond op de pagina hierna.
 }

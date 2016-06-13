@@ -47,6 +47,8 @@ public class SubmitAntwoordServlet extends HttpServlet {
 			req.setAttribute("msgs", "Vul een antwoord in!");
 			req.getRequestDispatcher("leerlinghuiswerk.jsp").forward(req, resp);
 		}
-
+		//Slaat het antwoord op dat gegeven is door de leerling. Antwoord mag niet leeg zijn. 
+		// De delete heb ik erin gedaan om er 100% zeker van te zijn dat het vorige antwoord ook echt uit de database
+		// Verwijderd is, het is niet de ideale manier (Update zou kunnen) maar ik wilde geen risico nemen.
 	}
 }

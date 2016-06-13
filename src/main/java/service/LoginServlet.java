@@ -51,4 +51,7 @@ public class LoginServlet extends HttpServlet {
 		}
 
 	}
+	// Logt de User in als 1. De gebruiker in de database voorkomt EN 2. Wanneer hiervan dan ook het wachtwoord klopt.
+	// Hierna wordt een cookie aangemaakt en wordt op basis van de int isLeraar de persoon duurgestuur naar de 
+	// desbetreffende pagina. 1 = Leraar  0 = Leerling.
 }

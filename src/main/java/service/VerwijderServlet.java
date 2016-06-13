@@ -23,5 +23,8 @@ public class VerwijderServlet extends HttpServlet {
 		service.insertAntwoord("", persoonlijkecode, gekozen_vakcode, vraag);
 		resp.sendRedirect("leerlinghuiswerk.jsp");
 	}
-
+//Verwijderd een al gegeven antwoord. Hij doet een insert op het eind om ook een probleem op te lossen.
+	//De antwoorden laat ik zien in een textarea doormiddel van een index van een lijst. 
+	//Echter is er dan een probleem dat wanneert jij bijvoorbeeld vraag 2 eerst in vul dat het antwoord in het eerste
+	//Textvak komt te staan. Ik heb dit dus gebruikt om een klein beetje die fout weg te halen wanneer iemand een oud antwoord verwijderd.
 }

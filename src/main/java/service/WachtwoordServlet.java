@@ -38,7 +38,8 @@ public class WachtwoordServlet extends HttpServlet {
 			req.setAttribute("msgs", "Gebruiker niet bekend");
 			req.getRequestDispatcher("/verander.jsp").forward(req, resp);
 		}
-		
+		//Zorgt ervoor dat jij je wachtwoord kan veranderen wanneer de gebruiker bestaat, het wachtwoord klopt 
+		//En de 2 keer opgegeven nieuwe wachtwoorden overeenkomen met elkaar.
 		
 }
 }
