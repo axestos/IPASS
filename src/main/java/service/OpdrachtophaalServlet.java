@@ -29,4 +29,6 @@ public class OpdrachtophaalServlet extends HttpServlet {
 			req.getRequestDispatcher("/leraar/leraaropdrachten.jsp").forward(req, resp);
 		}
 	}
+	//Haalt alle opdrachtcodes 8ENG1 enz. op uit de database en stuurt de juiste persoon naar de juiste pagina 
+	//en laat de opdrachtcodes op de pagina erna zien.
 }

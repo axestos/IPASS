@@ -18,7 +18,7 @@ public class MainFilter implements Filter {
 		// TODO Auto-generated method stub
 	}
 	@Override
-	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
+	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)//Filetert alle pagina's waar voor je ingelogd moet zijn
 			throws IOException, ServletException {
 		HttpServletRequest request = (HttpServletRequest)req;
 		if(request.getSession().getAttribute("loggedUser")==null){

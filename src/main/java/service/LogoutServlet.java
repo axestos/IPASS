@@ -14,8 +14,7 @@ public class LogoutServlet extends HttpServlet{
 		
 	HttpSession ses = req.getSession();
 	ses.invalidate();
-//	req.getRequestDispatcher("index.jsp").forward(req, resp);
 	resp.sendRedirect("index.jsp");
 	}
-	
+	//Maakt de sessie invalid, hierdoor logt de user uit en stuurt de gebruiker naar de loginpagina
 }

@@ -18,7 +18,7 @@ public class LeraarFilter implements Filter{
 		// TODO Auto-generated method stub
 	}
 	@Override
-	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
+	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)//Filtert alle verkeer naar /leerling/
 			throws IOException, ServletException {
 		HttpServletRequest request = (HttpServletRequest)req;
 		User u = (User) request.getSession().getAttribute("loggedUser");
