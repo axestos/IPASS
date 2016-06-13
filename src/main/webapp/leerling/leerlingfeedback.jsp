@@ -50,6 +50,7 @@ button {
 		<p>Er is geen feedback gevonden voor deze opdracht.</p>
 	</c:if>
 	<c:if test="${not empty feedback}">
+	<p>Feedback van de leraar:</p>
 	<p>${feedback}</p>
 	</c:if>	
 </body>
