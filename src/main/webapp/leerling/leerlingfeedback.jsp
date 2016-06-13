@@ -28,7 +28,11 @@ h1 {
 }
 
 p {
-	font-size: 125%;
+	font-size: 175%;
+}
+
+p.text {
+	font-size: 150%;
 }
 
 button {
