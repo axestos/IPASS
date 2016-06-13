@@ -19,7 +19,7 @@ public class HuiswerkvragenServlet extends HttpServlet {
 		List<Huiswerk> huiswerkvragen = service.getVragen(opdrachtcode);
 		System.out.println(huiswerkvragen.toString());
 		ses.setAttribute("huiswerkLijst", huiswerkvragen);
-		req.getRequestDispatcher("/leerling/leerlinghuiswerk.jsp").forward(req, resp);
+		req.getRequestDispatcher("/leerling/leerlingkeuze.jsp").forward(req, resp);
 		//Haalt de vragen op via de UserService en zet deze in attributen zodat ze op de volgende pagina 
 		//opgehaald kunnen worden
 	}

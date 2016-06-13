@@ -94,12 +94,39 @@
 	</servlet-mapping>
 	
 	<servlet>
+		<servlet-name>GetFeedbackServlet</servlet-name>
+		<servlet-class>service.GetFeedbackServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetFeedbackServlet</servlet-name>
+		<url-pattern>/leerling/GetFeedbackServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
 		<servlet-name>VraagEnAntwoordServlet</servlet-name>
 		<servlet-class>service.VraagEnAntwoordServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>VraagEnAntwoordServlet</servlet-name>
 		<url-pattern>/leraar/VraagEnAntwoordServlet.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>DeleteFeedback</servlet-name>
+		<servlet-class>service.DeleteFeedback</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteFeedback</servlet-name>
+		<url-pattern>/leraar/DeleteFeedback.do</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>InsertFeedbackServlet</servlet-name>
+		<servlet-class>service.InsertFeedbackServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertFeedbackServlet</servlet-name>
+		<url-pattern>/leraar/InsertFeedbackServlet.do</url-pattern>
 	</servlet-mapping>
 	
 	<filter>

@@ -3,6 +3,7 @@ package service;
 import java.util.List;
 
 import DAO.AntwoordDAO;
+import DAO.FeedbackDAO;
 import DAO.OpdrachtDAO;
 import DAO.UserDAO;
 //Implementeerd alle DAO's voor gebruik in andere klassen.
@@ -10,11 +11,16 @@ public class UserService {
 	private UserDAO dao = new UserDAO();
 	private OpdrachtDAO opdracht = new OpdrachtDAO();
 	private AntwoordDAO ant = new AntwoordDAO();
+	private FeedbackDAO feedback = new FeedbackDAO();
 
 	public List<Klas> getAllLeerlingenKlas(String klas) {
 		return dao.allUsersUitKlas(klas);
 	}
 
+	public User getUserByName(String naam){
+		return dao.getUserByName(naam);
+	}
+	
 	public String getPassword(String username) {
 		return dao.getPassword(username);
 	}
@@ -64,5 +70,17 @@ public class UserService {
 	
 	public List<String> getVolledigeNaam(int persoonlijkecode){
 		return dao.getVolledigeNaam(persoonlijkecode);
+	}
+	
+	public List<String> getFeedback(int leerlingcode, String opdrachtcode){
+		return feedback.getFeedback(leerlingcode, opdrachtcode);
+	}
+	
+	public void insertFeedback(int leerlingcode, String opdrachtcode, String insFeedback){
+		feedback.insertFeedback(leerlingcode, opdrachtcode, insFeedback);
+	}
+	
+	public void deleteFeedback(int leerlingcode, String opdrachtcode){
+		feedback.deleteFeedback(leerlingcode, opdrachtcode);
 	}
 }

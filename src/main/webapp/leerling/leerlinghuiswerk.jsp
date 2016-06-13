@@ -60,8 +60,8 @@ textarea {
 	<h1>${gekozenOpdracht}</h1>
 	<br>
 	<form
-		action="http://ipass-v1wackw.rhcloud.com/leerling/leerlingopdrachten.jsp">
-		<button type="submit">Andere opdracht kiezen</button>
+		action="http://ipass-v1wackw.rhcloud.com/leerling/leerlingkeuze.jsp">
+		<button type="submit">Andere keuze maken</button>
 	</form>
 	<div class="w3-card-2 w3-red">
 		Foutmeldingen:<br>
