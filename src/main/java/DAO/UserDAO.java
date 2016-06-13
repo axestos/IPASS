@@ -125,6 +125,11 @@ public class UserDAO extends BaseDAO{
 		return user;
 	}
 	
+	public User getUserByName(String naam){//Haalt de user op doormiddel van de naam
+		User user = selectUser("SELECT * FROM users WHERE naam_vol ='"+naam+"'").get(0);
+		return user;
+	}
+	
 	public List<Klas> allUsersUitKlas(String klas){//Haalt alle leerlingen op uit een klas met een bepaalde klascode
 		List<Klas> heleKlas = selectKlas("SELECT * FROM users WHERE klas = '"+klas+"'"
 				+ "AND isLeraar=0");

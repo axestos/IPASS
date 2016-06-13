@@ -5,6 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <title>Inloggen</title>
 <style type="text/css">
+h2{
+	font-size: 225%;
+}
+
 h1 {
  font-size: 250%;
 }
