@@ -76,6 +76,7 @@ textarea {
 				<td class="data"><b>${antwoordenLijst[status.index]}</b></td>
 			</tr>
 		</c:forEach>
+		<tr></tr>
 		<tr>
 			<td>
 				<form action="/leraar/InsertFeedbackServlet.do" method="post">
