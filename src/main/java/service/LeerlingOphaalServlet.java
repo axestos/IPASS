@@ -20,6 +20,7 @@ public class LeerlingOphaalServlet extends HttpServlet {
 		List<Klas> klas = service.getAllLeerlingenKlas(klascode);
 		ses.setAttribute("leerlingenLijst", klas);
 		req.getRequestDispatcher("/leraar/leraarklas.jsp").forward(req, resp);
-	
+	//Haalt alle leerlingen op uit een bepaalde klas met behulp van de UserService en zet deze in een attribuut
+		//zodat deze opgehaald kunnen worden op de volgende pagina
 	
 	}}
