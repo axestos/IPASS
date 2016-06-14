@@ -28,7 +28,10 @@ h1 {
 }
 
 p {
-	font-size: 125%;
+	font-size: 175%;
+}
+p.text {
+	font-size: 150%
 }
 
 button {
@@ -51,7 +54,8 @@ button {
 	</c:if>
 	<c:if test="${not empty feedback}">
 	<p>Feedback van de leraar:</p>
-	<p>${feedback}</p>
+	<p class="text">${feedback}</p>
+
 	</c:if>	
 </body>
 </html>
