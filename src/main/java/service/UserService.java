@@ -60,8 +60,8 @@ public class UserService {
 		return ant.getAntwoordenBijOpdracht(opdrachtcode, persoonlijkecode);
 	}
 	
-	public void insertAntwoord(String antwoord, int persoonlijkecode, String opdrachtcode, String vraag){
-		ant.insertAntwoord(antwoord, persoonlijkecode, opdrachtcode, vraag);	
+	public void insertAntwoord(String antwoord, int persoonlijkecode, String opdrachtcode, String vraag, String persoonlijkevraag){
+		ant.insertAntwoord(antwoord, persoonlijkecode, opdrachtcode, vraag, persoonlijkevraag);	
 	}
 	
 	public void deleteAntwoord(int persoonlijkecode, String opdrachtcode, String vraag){
@@ -76,8 +76,8 @@ public class UserService {
 		return feedback.getFeedback(leerlingcode, opdrachtcode);
 	}
 	
-	public void insertFeedback(int leerlingcode, String opdrachtcode, String insFeedback){
-		feedback.insertFeedback(leerlingcode, opdrachtcode, insFeedback);
+	public void insertFeedback(int leerlingcode, String opdrachtcode, String insFeedback, String persoonlijkeopdrcode){
+		feedback.insertFeedback(leerlingcode, opdrachtcode, insFeedback, persoonlijkeopdrcode);
 	}
 	
 	public void deleteFeedback(int leerlingcode, String opdrachtcode){

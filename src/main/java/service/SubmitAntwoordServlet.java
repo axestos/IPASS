@@ -27,13 +27,15 @@ public class SubmitAntwoordServlet extends HttpServlet {
 		if (!antwoord.equals("")) {
 				if (alGegevenAntwoord.isEmpty()) {
 					System.out.println("Er is nog geen antwoord gegeven");
+					String persoonlijkevraag = persoonlijkecode + vraag; 
 					service.deleteAntwoord(persoonlijkecode, gekozen_vakcode, vraag); //deze erin gezet omdat hij een error gaf als er eerst gedelete was
-					service.insertAntwoord(antwoord, persoonlijkecode, gekozen_vakcode, vraag);
+					service.insertAntwoord(antwoord, persoonlijkecode, gekozen_vakcode, vraag, persoonlijkevraag);
 					resp.sendRedirect("leerlinghuiswerk.jsp");
 				} else {
 					System.out.println("Antwoord veranderen");
+					String persoonlijkevraag = persoonlijkecode + vraag; 
 					service.deleteAntwoord(persoonlijkecode, gekozen_vakcode, vraag);
-					service.insertAntwoord(antwoord, persoonlijkecode, gekozen_vakcode, vraag);
+					service.insertAntwoord(antwoord, persoonlijkecode, gekozen_vakcode, vraag, persoonlijkevraag);
 					resp.sendRedirect("leerlinghuiswerk.jsp");
 				}
 		} else {

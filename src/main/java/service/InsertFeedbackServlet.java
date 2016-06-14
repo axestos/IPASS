@@ -21,8 +21,9 @@ public class InsertFeedbackServlet extends HttpServlet {
 		int leerlingcode = leerling.getPersoonlijk_nummer();
 		String opdrachtcode = (String) ses.getAttribute("gekozenOpdracht");
 		String feedback = req.getParameter("textfield");
+		String persoonlijkeopdrcode = leerlingcode + opdrachtcode;
 		service.deleteFeedback(leerlingcode, opdrachtcode);//Dit is er om er voor te zorgen dat de oude feedback er niet meer in zit als die al gegeven was.
-		service.insertFeedback(leerlingcode, opdrachtcode, feedback);
+		service.insertFeedback(leerlingcode, opdrachtcode, feedback, persoonlijkeopdrcode);
 		req.getRequestDispatcher("/leraar/leraarantwoorden.jsp").forward(req, resp);
 		
 		//Voegt feedback toe aan de table door verschillende attributen op te vragen.

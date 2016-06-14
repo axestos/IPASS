@@ -18,9 +18,9 @@ public class VerwijderServlet extends HttpServlet {
 		String vraag = req.getParameter("delete");
 		int persoonlijkecode = u.getPersoonlijk_nummer();
 		String gekozen_vakcode = (String) ses.getAttribute("gekozenOpdracht");
-
+		String persoonlijkevraag = persoonlijkecode + vraag;
 		service.deleteAntwoord(persoonlijkecode, gekozen_vakcode, vraag);
-		service.insertAntwoord("", persoonlijkecode, gekozen_vakcode, vraag);
+		service.insertAntwoord("", persoonlijkecode, gekozen_vakcode, vraag, persoonlijkevraag);
 		resp.sendRedirect("leerlinghuiswerk.jsp");
 	}
 //Verwijderd een al gegeven antwoord. Hij doet een insert op het eind om ook een probleem op te lossen.
