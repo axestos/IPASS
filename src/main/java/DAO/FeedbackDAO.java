@@ -42,12 +42,14 @@ public class FeedbackDAO extends BaseDAO {
 		}
 	}
 	
-	public void insertFeedback(int leerlingcode, String opdrachtcode, String feedback){//Zet de feedback in de tabel
+	public void insertFeedback(int leerlingcode, String opdrachtcode, String feedback, String persoonlijkeopdrcode){//Zet de feedback in de tabel
 		try (Connection con = super.getConnection()) {
-			PreparedStatement ps = con.prepareStatement("INSERT INTO feedback(persoonlijkecode,opdrachtcode,feedback) VALUES(?,?,?)");
+			PreparedStatement ps = con.prepareStatement("INSERT INTO feedback(persoonlijkecode,opdrachtcode,feedback,persopdrcode) VALUES(?,?,?,?)");
+			String persopdrcode = leerlingcode + opdrachtcode;
 			ps.setInt(1, leerlingcode);
 			ps.setString(2, opdrachtcode);
 			ps.setString(3, feedback);
+			ps.setString(4, persopdrcode);
 			ps.executeUpdate();
 			ps.close();
 	}

@@ -76,8 +76,8 @@ public class UserService {
 		return feedback.getFeedback(leerlingcode, opdrachtcode);
 	}
 	
-	public void insertFeedback(int leerlingcode, String opdrachtcode, String insFeedback){
-		feedback.insertFeedback(leerlingcode, opdrachtcode, insFeedback);
+	public void insertFeedback(int leerlingcode, String opdrachtcode, String insFeedback, String persoonlijkeopdrcode){
+		feedback.insertFeedback(leerlingcode, opdrachtcode, insFeedback, persoonlijkeopdrcode);
 	}
 	
 	public void deleteFeedback(int leerlingcode, String opdrachtcode){
