@@ -57,13 +57,14 @@ public class AntwoordDAO extends BaseDAO {
 		return selectAntwoordBijVraag("SELECT * FROM antwoord WHERE persoonlijkecode='"+persoonlijkecode+"' AND opdrachtcode='"+opdrachtcode+"'");
 	}
 	
-	public void insertAntwoord(String antwoord, int persoonlijkecode, String opdrachtcode, String vraag){//Zet een antwoord in de tabel.
+	public void insertAntwoord(String antwoord, int persoonlijkecode, String opdrachtcode, String vraag, String persoonlijkevraag){//Zet een antwoord in de tabel.
 		try (Connection con = super.getConnection()) {
-			PreparedStatement ps = con.prepareStatement("INSERT INTO antwoord(antwoord, persoonlijkecode, opdrachtvraag, opdrachtcode) VALUES(?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("INSERT INTO antwoord(antwoord, persoonlijkecode, opdrachtvraag, opdrachtcode, persoonlijkevraag) VALUES(?,?,?,?,?)");
 			ps.setString(1, antwoord);
 			ps.setInt(2, persoonlijkecode);
 			ps.setString(3, vraag);
 			ps.setString(4, opdrachtcode);
+			ps.setString(5, persoonlijkevraag);
 			ps.executeUpdate();
 			ps.close();
 	}
